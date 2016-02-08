@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 744.09448819 1052.3622047"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="team-black-logo.svg">
+  <defs
+     id="defs4">
+    <clipPath
+       id="clipPath3369"
+       clipPathUnits="userSpaceOnUse">
+      <path
+         inkscape:connector-curvature="0"
+         id="path3371"
+         d="M 0,500 500,500 500,0 0,0 0,500 Z" />
+    </clipPath>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.35"
+     inkscape:cx="-63.571429"
+     inkscape:cy="520"
+     inkscape:document-units="px"
+     inkscape:current-layer="g3367"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1060"
+     inkscape:window-x="3838"
+     inkscape:window-y="-3"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       transform="matrix(1.25,0,0,-1.25,58.713948,664.64769)"
+       inkscape:label="brennende Chilli"
+       id="g3363">
+      <g
+         id="g3365">
+        <g
+           clip-path="url(#clipPath3369)"
+           id="g3367">
+          <ellipse
+             style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:16.50120926;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+             id="path3396"
+             cx="242.17169"
+             cy="-234.50693"
+             transform="scale(1,-1)"
+             rx="234.63512"
+             ry="223.67085" />
+          <g
+             id="g3390"
+             transform="matrix(0.75276875,0,0,0.75276875,60.140972,57.252215)">
+            <g
+               id="g3373"
+               transform="translate(330.3387,212.5665)">
+              <path
+                 d="m 0,0 c -6.95,-7.296 -37.993,-46.352 -94.057,-62.661 -56.063,-16.309 -61.16,-10.73 -61.16,-10.73 82.937,10.73 124.96,58.221 134.367,69.958 C 24.557,53.219 52.82,19.313 52.82,19.313 16.68,30.472 6.95,7.296 0,0 m -219.179,-90.581 c -20.574,-6.826 -53.493,-24.652 -53.493,-24.652 21.397,26.549 63.837,33.865 78.594,35.272 11.933,1.138 31.685,0 31.685,0 4.07,-0.144 -36.211,-3.793 -56.786,-10.62 M 131.648,89.987 c -1.716,6.438 -25.751,-3.863 -20.6,-3.863 5.15,0 10.3,-17.167 4.291,-26.609 -6.008,-9.442 -26.18,-23.605 -37.768,-18.884 -11.588,4.721 -19.742,0 -22.747,-0.858 -3.004,-0.859 -11.588,11.588 -39.914,0 -28.326,-11.588 -40.772,-41.631 -81.545,-71.245 -40.772,-29.614 -90.129,-36.052 -112.017,-38.197 -21.888,-2.146 -70.386,-7.726 -94.421,-35.623 -24.034,-27.897 -16.738,-27.468 -15.021,-31.76 1.717,-4.291 15.451,5.151 18.026,6.438 2.575,1.288 29.613,16.309 63.519,15.022 33.906,-1.288 60.515,-3.863 121.888,-7.296 61.374,-3.434 103.279,17.882 129.185,33.905 13.253,8.198 36.481,32.618 36.481,32.618 17.545,18.498 11.158,49.356 11.158,49.356 12.447,9.872 6.009,32.618 6.009,32.618 48.927,34.764 35.193,57.94 33.476,64.378"
+                 style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+                 id="path3375"
+                 inkscape:connector-curvature="0" />
+            </g>
+            <g
+               id="g3377"
+               transform="translate(104.2624,174.0901)">
+              <path
+                 d="m 0,0 c -6.998,17.402 -23.909,82.757 12.488,140.716 0,0 -0.623,-67.568 23.107,-66.984 23.731,0.585 45.823,22.25 35.504,67.633 -10.32,45.383 -42.417,77.799 12.266,128.083 0,0 -28.758,-64.284 7.557,-92.699 36.315,-28.415 -2.881,67.13 -2.881,67.13 0,0 72.66,-61.766 54.145,-152.231 -5.182,-25.296 2.142,-40.32 16.783,-20.198 14.64,20.123 10.01,75.026 10.01,75.026 0,0 39.758,-39.627 41.768,-69.818 0.524,-5.143 -11.898,-12.115 -19.703,-12.755 -7.805,-0.64 -7.364,19.985 -7.364,19.985 0,0 -10.7,-40.717 -31.3,-44.741 -13.239,-2.136 -32.257,0.822 -32.744,30.629 -0.487,29.806 11.432,61.287 2.309,70.899 -9.123,9.613 -20.156,12.128 -27.55,3.673 -7.394,-8.455 8.142,-79.682 -54.022,-91.022 -13.515,-2.953 -24.973,5.617 -25.789,7.996 -2.436,7.108 1.23,-62.677 23.477,-79.416 3.94,-4.264 -22.798,-5.905 -29.409,2.793 C 2.041,-6.602 2.262,-5.625 0,0"
+                 style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+                 id="path3379"
+                 inkscape:connector-curvature="0" />
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

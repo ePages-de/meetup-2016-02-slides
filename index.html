@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+
+    <title>Microservices Meetup Hamburg - A journey through the world of Service Discovery</title>
+
+    <meta name="description" content="Microservices Meetup Hamburg - A journey through the world of Service Discovery">
+    <meta name="author" content="Dirk Jablonski">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/black.css" id="theme">
+
+    <!-- Code syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="lib/css/font-awesome/css/font-awesome.min.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+
+    <style>
+      .reveal h1,
+      .reveal h2,
+      .reveal h3 {
+        text-transform: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section id="intro" data-background="white" data-background-transition="none">
+          <section>
+            <h3>A journey through the world of</h3>
+            <h1>Service Discovery</h1>
+            <img src="img/epages.png" style="margin: 0; border:none; box-shadow:none; background:none; width:400px;">
+            <p style="margin: 0;">
+              <small>Team Black</small>
+            </p>
+            <img src="img/team-black-logo.svg" style="margin: 0; border:none; box-shadow:none; background:none; width:100px;">
+          </section>
+
+          <section>
+            <img src="img/epages.png" style="border:none; box-shadow:none; background:none; width:500px;">
+            <ul style="margin-top: 0px">
+              <li class="fragment">SaaS eCommerce company</li>
+              <li class="fragment">Business model B2B2C</li>
+              <li class="fragment">&gt; 140k shops worldwide</li>
+            </ul>
+          </section>
+          <section>
+            <h3>...and, btw, we're hiring <i class="fa fa-smile-o fa-lg"></i></h3>
+            <p>If you're interested: contact Serena Tansil<br/>(or anyone else from ePages)</p>
+          </section>
+          <section>
+            <h2>What is our use case?</h2>
+            <p class="fragment">The existing ePages software stack:</p>
+            <ul>
+              <li class="fragment">Implementation language: Perl</li>
+              <li class="fragment">Running in monolithic application server</li>
+              <li class="fragment">Features provided as modules</li>
+            </ul>
+          </section>
+          <section>
+            <h2>What is our use case?</h2>
+            <p class="fragment">Goals for a future architecture/implementation:</p>
+            <ul>
+              <li class="fragment">Modern architecture</li>
+              <li class="fragment">State-of-the-art software stack</li>
+              <li class="fragment">Easily scalable across teams</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Why Service Discovery?</h2>
+            <ul>
+              <li class="fragment">Service instances come and go</li>
+              <li class="fragment">Routing requests to corresponding instances</li>
+              <li class="fragment">Balance load dynamically between instances</li>
+            </ul>
+          </section>
+          <section data-background-transition="none">
+            <h2>What's on tonight?</h2>
+            <ul>
+              <li class="fragment">Different implementations of Service Discovery</li>
+              <li class="fragment">Pros &amp; Cons (from our point of view)</li>
+              <li class="fragment">Lessons learned</li>
+            </ul>
+          </section>
+        </section>
+
+        <section id="journey-begins" data-background-transition="none">
+          <section data-background="url('img/journey-begins.jpg')">
+            <h2 style="position: absolute; top: -250px; left: -100px;">The journey begins...</h2>
+          </section>
+          <section>
+            <h2>Greenfield prototype</h2>
+            <ul>
+              <li class="fragment">No preset technology stack</li>
+            </ul>
+          </section>
+          <section>
+            <h2>First choice: Netflix Eureka</h2>
+            <ul>
+              <li class="fragment">Used several components of Netflix OSS</li>
+              <li class="fragment">Netflix being a well-known early adaptor</li>
+              <li class="fragment">Fulfilled basic requirements</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Eureka at a glance</h2>
+            <img src="img/eureka-architecture.svg" style="border:none; box-shadow:none; background:none; width:1200px;">
+          </section>
+          <section>
+            <h2>Service Discovery, i=1</h2>
+            <img src="img/sd-iteration1.svg" style="border:none; box-shadow:none; background:none; width:1200px;">
+          </section>
+          <section>
+            <h2>Wrap-up</h2>
+            <ul>
+              <li class="fragment">Eureka simply works</li>
+              <li class="fragment">Easy to get started</li>
+              <li class="fragment">Requires code changes</li>
+            </ul>
+          </section>
+        </section>
+
+        <section id="stony-passage" data-background-transition="none">
+          <section data-background="url('img/stony-passage.jpg')">
+            <h2 style="position: absolute; top: -300px; right: -150px; color: black;">Stony passage</h2>
+          </section>
+          <section>
+            <h2>K.I.S.S.</h2>
+            <ul>
+              <li class="fragment">Keep service discovery out of code</li>
+              <li class="fragment">Deployment with Docker containers</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Pivot to Consul</h2>
+            <ul>
+              <li class="fragment">Server-based load balancing</li>
+              <li class="fragment">Agent-based registration</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Consul distilled</h2>
+            <img src="img/consul-architecture.svg" style="border:none; box-shadow:none; background:none; width:1200px;">
+          </section>
+          <section>
+            <h2>Add-on: Registrator</h2>
+            <img src="img/registrator-architecture.svg" style="border:none; box-shadow:none; background:none; width:300px;">
+          </section>
+          <section>
+            <h2>Service Discovery, i=2</h2>
+            <img src="img/sd-iteration2.svg" style="border:none; box-shadow:none; background:none; width:1200px;">
+          </section>
+          <section>
+            <h2>Wrap-up</h2>
+            <ul>
+              <li class="fragment">Fulfills all (currently known) requirements</li>
+              <li class="fragment">Fully automated with Registrator</li>
+            </ul>
+          </section>
+        </section>
+
+        <section id="relieving-the-burden" data-background-transition="none">
+          <section data-background="url('img/relieving-the-burden.jpg')">
+            <h2 style="position: absolute; top: -300px; left: -150px;">Relieving the burden</h2>
+          </section>
+          <section>
+            <h2>New ingredient: Kubernetes</h2>
+            <ul>
+              <li class="fragment">Orchestration for Docker containers</li>
+              <li class="fragment">Each "pod" addressable with its own IP</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Kubernetes services &amp; KubeDNS</h2>
+            <img src="img/kubernetes-architecture.svg" style="border:none; box-shadow:none; background:none; width:1200px;">
+          </section>
+          <section>
+            <h2>Streamlining</h2>
+            <ul>
+              <li class="fragment">Service Discovery duplicated</li>
+              <li class="fragment">Additional runtime dependencies</li>
+              <li class="fragment">Additional components to be managed</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Service Discovery, i=3</h2>
+            <img src="img/sd-iteration3.svg" style="border:none; box-shadow:none; background:none; width:1200px;">
+          </section>
+          <section>
+            <h2>Wrap-up</h2>
+            <ul>
+              <li class="fragment">Reduced complexity</li>
+              <li class="fragment">No add-on infrastructure</li>
+            </ul>
+          </section>
+        </section>
+
+        <section id="broadening-the-view" data-background-transition="none">
+          <section data-background="url('img/broadening-the-view.jpg')">
+            <h2 style="position: absolute; top: -330px; right: 50px; color: black;">Broadening the view</h2>
+          </section>
+          <section>
+            <h2>Being too focused</h2>
+            <ul>
+              <li class="fragment">System works well for full environment</li>
+              <li class="fragment">.. but hardly usable in developer setup</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Side step:<br/>Spring Cloud Discovery</h2>
+            <ul style="list-style-type: none">
+              <li class="fragment"><i class="fa fa-plus-square-o"></i> Single annotation plus some configuration</li>
+              <li class="fragment"><i class="fa fa-minus-square-o"></i> Re-introduces additional infrastructure</li>
+              <li class="fragment"><i class="fa fa-minus-square-o"></i> Re-introduces discovery-specific client-side code</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Ribbon</h2>
+            <ul>
+              <li class="fragment">IPC library with HTTP support, including REST-style</li>
+              <li class="fragment">Optionally provides client-side load balancing</li>
+              <li class="fragment">Highly configurable, both dynamically and statically</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Service Discovery, i=4 - Kubernetes</h2>
+            <img src="img/sd-iteration4-kube.svg" style="border:none; box-shadow:none; background:none; width:1200px;">
+          </section>
+          <section>
+            <h2>Service Discovery, i=4 - dev</h2>
+            <img src="img/sd-iteration4-dev.svg" style="border:none; box-shadow:none; background:none; width:600px;">
+          </section>
+          <section>
+            <h2>Wrap-up</h2>
+            <ul>
+              <li class="fragment">Works in development &amp; managed environments</li>
+              <li class="fragment">No additional infrastructure &amp; code</li>
+            </ul>
+          </section>
+        </section>
+
+        <section id="demo" data-background-transition="none">
+          <h2>Demo</h2>
+        </section>
+
+        <section id="learnings" data-background-transition="none">
+          <section data-background="url('img/light-bulb.jpg')" data-background-transition="none">
+            <h2 style="position: absolute; right: 50px;">Learnings</h2>
+          </section>
+          <section data-background="url('img/technology.jpg')" data-background-transition="none">
+            <h2 style="position: absolute; top: -250px; left: -150px;">Technology doesn't matter</h2>
+          </section>
+          <section data-background="url('img/change.jpg')" data-background-transition="none">
+            <h2 style="margin-top: 350px; text-align:center;">Embrace change</h2>
+          </section>
+          <section data-background="url('img/chamaeleon.jpg')" data-background-transition="none">
+            <h2 style="position: absolute; top: -250px;">Integrate with your environment</h2>
+          </section>
+          <section data-background-transition="none">
+            <img src="img/mind-the-dev.svg" style="border:none; box-shadow:none; background:none; width:700px;">
+          </section>
+        </section>
+
+        <section data-background="url('img/questions.jpg')" data-background-transition="none">
+            <h1 style="position: absolute; top: 50px; right: 100px;">Questions?</h1>
+        </section>
+
+        <section>
+          <h1>Thank you!</h1>
+          <p>&nbsp;</p>
+          <p style="margin: 0;">
+            <small>
+              Image attributions:
+              <ul style="margin: 0;">
+                <li>"The journey begins": by <a href="https://www.flickr.com/photos/markjsebastian">Mark Sebastian</a></li>
+                <li>"Stony passage": by <a href="https://www.flickr.com/people/25691430@N04">Harald Hoyer</a></li>
+                <li>"Relieving the burden": by <a href="https://www.flickr.com/people/40561337@N07">Gov. of Thailand</a></li>
+                <li>all others: public domain</li>
+              </ul>
+            </small>
+          </p>
+        </section>
+      </div>
+    </div>
+
+    <script src="lib/js/head.min.js"></script> 
+    <script src="js/reveal.js"></script>
+
+    <script>
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+          controls: true,
+          progress: true,
+          history: true,
+          center: true,
+
+          transition: 'none', // none/fade/slide/convex/concave/zoom
+
+          // Optional reveal.js plugins
+          dependencies: [
+              { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+              { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+              { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+              { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+              { src: 'plugin/zoom-js/zoom.js', async: true },
+              { src: 'plugin/notes/notes.js', async: true }
+          ]
+      });
+    </script>
+  </body>
+</html>
